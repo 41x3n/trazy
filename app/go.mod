@@ -1,4 +1,4 @@
-module 41x3n/tracy
+module 41x3n/trazy
 
 go 1.20
 

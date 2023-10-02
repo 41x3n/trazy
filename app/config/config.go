@@ -1,7 +1,7 @@
 package config
 
 import (
-	"41x3n/tracy/utils"
+	"41x3n/trazy/utils"
 	"os"
 
 	"github.com/joho/godotenv"

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"41x3n/tracy/config"
-	"41x3n/tracy/routes"
-	"41x3n/tracy/utils"
+	"41x3n/trazy/config"
+	"41x3n/trazy/routes"
+	"41x3n/trazy/utils"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -34,7 +34,9 @@ func main() {
 	// Set up routes
 	routes.SetupRoutes(router)
 
-	port := get_port(cfg.Port)
+	infoLogger.Printf("Starting server on port %s", cfg.Port)
+
+	port := get_port(":" + cfg.Port)
 
 	// Start server
 	infoLogger.Fatal(router.Run(port))
