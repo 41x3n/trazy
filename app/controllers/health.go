@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"41x3n/tracy/models"
+	"41x3n/trazy/models"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
