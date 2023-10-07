@@ -14,8 +14,7 @@ import (
 )
 
 const (
-	cookieName  = "jwt"
-	redirectURL = "http://localhost:8080/api/health"
+	cookieName = "jwt"
 )
 
 func Callback(c *gin.Context) {
@@ -98,9 +97,15 @@ func issueSession() http.Handler {
 			SameSite: http.SameSiteStrictMode,
 		})
 
+		redirectURL := getRedirectURL(cfg)
+
 		// Redirect the user to the frontend web app.
 		http.Redirect(w, req, redirectURL, http.StatusFound)
 	}
 
 	return http.HandlerFunc(fn)
+}
+
+func getRedirectURL(cfg models.Config) string {
+	return cfg.SelfHost + "/api/health"
 }

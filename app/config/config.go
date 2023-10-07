@@ -43,5 +43,6 @@ func LoadConfig() (models.Config, error) {
 		GithubOAuthConfig:      githubOAuthConfig,
 		GithubOAuthStateConfig: stateConfig,
 		JwtSecret:              jwtSecret,
+		SelfHost:               selfHost,
 	}, nil
 }

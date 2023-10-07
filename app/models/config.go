@@ -13,4 +13,5 @@ type Config struct {
 	GithubOAuthConfig      *oauth2.Config
 	GithubOAuthStateConfig gologin.CookieConfig
 	JwtSecret              string
+	SelfHost               string
 }
